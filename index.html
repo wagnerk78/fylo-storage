@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <title>Storage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .view {
+            position: absolute;
+            background-color: #0c122c;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .image-logo {
+            width: 100vw;
+            height: 50vh;
+            margin-top: -100px;
+            position: static;
+
+        }
+
+        .box-left {
+            width: 330px;
+            height: 200px;
+            position: relative;
+            margin-top: 300px;
+            color: white;
+            background-color: #1d2c67;
+            margin-left: 300px;
+            padding: 35px;
+            border-radius: 10px 100px 10px 10px;
+        }
+
+        .box-right {
+            background-color: #1d2c67;
+            width: 500px;
+            height: 150px;
+            position: relative;
+            margin-top: -150px;
+            margin-left: 660px;
+            color: #848794;
+            font-size: 13px;
+            padding: 20px;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .options {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+
+        }
+
+        .box-dark-blue {
+            background-color: #0c122c;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+            margin-top: 30px;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .image {
+            padding: 13px;
+        }
+
+        #minhaDiv {
+            background: -webkit-gradient(linear, left top, right top, from(#CCCCCC), to(#ef5c8d)) no-repeat;
+            background: -moz-linear-gradient(left, #CCCCCC, #ea9ab5);
+            filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#CCCCCC', EndColorStr='#000000');
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            border-radius: 10px 10px 10px 10px;
+            position: absolute;
+        }
+
+        #minhaDiv2 {
+            background-color: #0c122c;
+            border-radius: 10px 10px 10px 10px;
+            position: absolute;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+
+        }
+
+        #minhaDiv3 {
+            background-color: white;
+            border-radius: 10px 10px 10px 10px;
+            position: absolute;
+            margin-left: 310px;
+
+        }
+
+
+
+        .storage {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 8px;
+            margin-right: 20px;
+            padding: 15px;
+        }
+
+        p {
+            margin: 30px 0px 20px 20px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .number {
+            color: 	white;
+            font-size: 11px;
+        }
+
+        .balao2 {
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            width: 150px;
+            height: 65px;
+            color: #0c122c;
+            padding: 20px;
+            position: relative;
+            margin-top: -60px;
+            margin-left: 270px;
+            display: flex;
+      
+        }
+
+        .balao2:after {
+            /*Triangulo*/
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-left: 25px solid transparent;
+            /*border-right: 20px solid transparent;*/
+            /*Faz seta "apontar para baixo. Definir o valor como 'top' fará ela "apontar para cima" */
+            /*Aqui entra a cor da "aba" do balão */
+            border-top: 30px solid white;
+            top: 58px;
+            /*localização. Experimente alterar para 'bottom'*/
+            left: 83.2%;
+        }
+
+        span {
+            font-size: 30px;
+        }
+
+        h4 {
+            font-size: 10px;
+            margin-top: 15px;
+            margin-left: 10px;
+            color: 	#848794;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="view">
+        <div class="box-left">
+            <img src="./images/logo.svg" alt="logo">
+            <div class="options">
+                <div class="box-dark-blue">
+                    <img class="image" src="./images/icon-document.svg" alt="document">
+                </div>
+                <div class="box-dark-blue">
+                    <img class="image" src="./images/icon-folder.svg" alt="document">
+                </div>
+                <div class="box-dark-blue">
+                    <img class="image" src="./images/icon-upload.svg" alt="document">
+                </div>
+            </div>
+        </div>
+        <div class="box-right">
+            <div class="balao2">
+                <div> <span><b>185</b></span></div>
+                <div> <h4>GB LEFT</h4></div>
+            </div>
+            <p>You’ve used <b>815 GB</b> of your storage.</p>
+            <div id="minhaDiv2" style="height:12px; width:400px"></div>
+            <div id="minhaDiv" style="height:10px; width:300px"></div>
+            <div id="minhaDiv3" style="height:10px; width:10px"></div>
+            <div class="storage">
+                <div class="number">0 GB</div>
+                <div class="number">1000 GB</div>
+            </div>
+
+        </div>
+        <img class="image-logo" src="./images/bg-desktop.png" alt="logo">
+    </div>
+
+</body>
+
+</html>
